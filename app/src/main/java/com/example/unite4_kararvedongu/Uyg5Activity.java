@@ -28,7 +28,10 @@ public class Uyg5Activity extends AppCompatActivity {
         int not3 = Integer.parseInt(txtNot3.getText().toString());
 
         float ort = (not1 + not2 + not3) / 3;
-
+        if (not1 > 100 || not2 > 100 || not3 > 100) {
+            Toast.makeText(this, "Lütfen 0-100 arasında not giriniz.", Toast.LENGTH_LONG).show();
+            return;
+        }
         if (ort >= 0 && ort < 25) {
             Toast.makeText(this, "0 ile KALDIIIIIIIIIIIIN", Toast.LENGTH_LONG).show();
         } else if (ort >= 25 && ort < 45) {
