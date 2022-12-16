@@ -12,6 +12,7 @@ public class Uyg3Activity extends AppCompatActivity {
 
     EditText txtUserName, txtPassword;
 
+    //Global değişkenler
     final String userName = "BomberMan";
     final String password = "123";
 
