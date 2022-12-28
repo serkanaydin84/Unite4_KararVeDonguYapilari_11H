@@ -34,7 +34,6 @@ public class Uyg4Activity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         konumServisleri.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

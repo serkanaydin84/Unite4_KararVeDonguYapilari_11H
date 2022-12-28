@@ -9,7 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Uyg2Activity extends AppCompatActivity {
-    EditText txtSayi1, txtSayi2;
+
+    EditText txtSayi1;
+    EditText txtSayi2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,7 +22,7 @@ public class Uyg2Activity extends AppCompatActivity {
         txtSayi2 = findViewById(R.id.txtSayi2);
     }
 
-    public void kontrolEt(View view) {
+    public void kontrolEt(View view){
         int sayi1 = Integer.parseInt(txtSayi1.getText().toString());
         int sayi2 = Integer.parseInt(txtSayi2.getText().toString());
 
@@ -28,12 +30,25 @@ public class Uyg2Activity extends AppCompatActivity {
             Toast.makeText(this, "1.sayı büyüktür", Toast.LENGTH_LONG).show();
         }
 
-        if (sayi2 > sayi1) {
+        if (sayi2 > sayi1){
             Toast.makeText(this, "2.sayı büyüktür", Toast.LENGTH_LONG).show();
         }
 
-        if (sayi1 == sayi2) {
+        if (sayi1 == sayi2){
             Toast.makeText(this, "Sayılar eşittir", Toast.LENGTH_LONG).show();
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

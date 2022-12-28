@@ -10,26 +10,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Uyg3Activity extends AppCompatActivity {
 
-    EditText txtUserName, txtPassword;
+    EditText txtKulAdi, txtSifre;
 
-    //Global değişkenler
-    final String userName = "BomberMan";
-    final String password = "123";
+    final String kullaniciAdi = "Serkan";
+    final String sifre = "123";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.uyg3_activity);
 
-        txtUserName = findViewById(R.id.txtUser);
-        txtPassword = findViewById(R.id.txtPass);
+        txtKulAdi = findViewById(R.id.txtUser);
+        txtSifre = findViewById(R.id.txtPass);
     }
 
-    public void btnLogin(View view) {
-        if (userName.equals(txtUserName.getText().toString()) && password.equals(txtPassword.getText().toString())) {
-            Toast.makeText(this, "Hadi yine iyisi giriş yapabildin, Artist", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Kullanıcı Adın veya şifren hatalı, ne işin var buralarda", Toast.LENGTH_LONG).show();
+    public void btnLogin(View view){
+        String kuladi = txtKulAdi.getText().toString();
+        String sifre = txtSifre.getText().toString();
+
+        if (kullaniciAdi.equals(kuladi) && sifre.equals(sifre)) {
+            Toast.makeText(this, "Giriş başarılı", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, "Giriş BAŞARISIZ", Toast.LENGTH_LONG).show();
+
         }
     }
 }
