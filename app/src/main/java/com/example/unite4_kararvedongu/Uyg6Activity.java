@@ -8,10 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Uyg6Activity extends AppCompatActivity {
+public class Uyg6Activity extends AppCompatActivity{
 
     EditText txtAy;
     TextView textView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,50 +22,51 @@ public class Uyg6Activity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
     }
 
-    public void btnOnayla(View view) {
+    public void btnOnayla(View view){
         int sayiAy = Integer.parseInt(txtAy.getText().toString());
         String ay = "";
         txtAy.setText("");
 
-        switch (sayiAy) {
+        switch (sayiAy){
             case 1:
-                ay = "OCAK";
+                ay = "Ocak";
                 break;
             case 2:
-                ay = "ŞUBAT";
+                ay = "Şubat";
                 break;
             case 3:
-                ay = "MART";
+                ay = "Mart";
                 break;
             case 4:
-                ay = "NİSAN";
+                ay = "Nisan";
                 break;
             case 5:
-                ay = "MAYIS";
+                ay = "Mayıs";
                 break;
             case 6:
-                ay = "HAZİRAN";
+                ay = "Haziran";
                 break;
             case 7:
-                ay = "TEMMUZ";
+                ay = "Temmuz";
                 break;
             case 8:
-                ay = "AĞUSTOS";
+                ay = "Ağustos";
                 break;
             case 9:
-                ay = "EYLÜL";
+                ay = "Eylül";
                 break;
             case 10:
-                ay = "EKİM";
+                ay = "Ekim";
                 break;
             case 11:
-                ay = "KASIM";
+                ay = "Kasım";
                 break;
             case 12:
-                ay = "ARALIK";
+                ay = "Aralık";
                 break;
             default:
-                ay = "YANLIŞ BİLGİ";
+                ay = "Hatalı Bilgi";
+                break;
         }
 
         textView.setText(ay);
